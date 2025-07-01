@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and Run current C++ with input/output",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "cd /d \"${fileDirname}\" && g++ \"${fileBasename}\" -o \"${fileBasenameNoExtension}.exe\" && \"${fileBasenameNoExtension}.exe\" < input.txt > output.txt "
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compiles and runs the currently open .cpp file with I/O redirection"
+    }
+  ]
+}
